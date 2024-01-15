@@ -1,0 +1,66 @@
+[root]
+Proxmox-pve ansible_host=10.0.0.207
+proxmox-hlvs ansible_host=10.0.0.206
+TrueNAS ansible_host=10.0.0.152
+nginx-pm ansible_host=10.0.0.4
+
+[admin]
+
+[admin:vars]
+ansible_ssh_user=admin
+ansible_ssh_pass=D06o17n73
+
+[master]
+
+[workers]
+
+[simone]
+PlexCT ansible_host=10.0.0.100
+NextCloud ansible_host=10.0.0.108
+Heimdall ansible_host=10.0.0.253
+
+[don]
+#Nextcloud2 ansible_host=10.0.0.109
+
+
+[root:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=d06o17n73
+
+[master:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=d06o17n73
+
+[workers:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=d06o17n73
+
+[simone:vars]
+ansible_ssh_user=simone
+
+[don:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=D06o17n73
+ansible_become_pass=D06o17n73
+
+#[master,workers:vars]
+#ansible_ssh_user=root
+#ansible_ssh_pass=d06o17n73
+
+#[masters]
+#master ansible_host=10.0.0.112 ansible_user=simone
+ 
+#[workers]
+#worker1 ansible_host=10.0.0.110 ansible_user=simone
+#worker2 ansible_host=10.0.0.111 ansible_user=simone
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+#[vars]
+#don=root
+
+#ssh key copy
+#ssh-copy-id -i ~/.ssh/ansible user@host
+#ansible-playbook --ask-become-pass name.yml
+#ansible diff user ansible-playbook -u root --ask-become-pass simone.yml
