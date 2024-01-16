@@ -4,8 +4,6 @@
 #nginx-pm ansible_host=10.0.0.4
 #Guacamole ansible_host=10.0.0.80
 #PiHole ansible_host=10.0.0.248
-Portainer104 ansible_host=10.0.0.104
-]
 
 [admin:vars]
 ansible_ssh_user=admin
@@ -22,6 +20,7 @@ ansible_ssh_pass=D06o17n73
 
 [don]
 #Nextcloud2 ansible_host=10.0.0.109
+Portainer104 ansible_host=10.0.0.104
 
 
 [root:vars]
@@ -40,9 +39,9 @@ ansible_ssh_pass=d06o17n73
 ansible_ssh_user=simone
 
 [don:vars]
-ansible_ssh_user=root
-ansible_ssh_pass=D06o17n73
-ansible_become_pass=D06o17n73
+ansible_ssh_user=don
+ansible_ssh_pass=don
+ansible_become_pass=don
 
 #[master,workers:vars]
 #ansible_ssh_user=root
