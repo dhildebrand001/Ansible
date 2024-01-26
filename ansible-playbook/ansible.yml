@@ -1,0 +1,27 @@
+- hosts: all
+  become: true
+  become_user: root
+  tasks:
+
+#  - name: update repository index
+#    apt:
+#      update_cache: yes
+
+
+  - name: create ansible user
+    user: 
+      name: ansible
+      groups: root
+
+  - name: add ssh key for ansible
+    authorized_key:
+      user: ansible
+      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBTPl1/YfEERNW2R0/bQBEiOHCJ99vZ2N+ATPEFze9HV ansible"
+
+  -  name: add sudoers file for ansible
+     copy:
+       src: ~/ansible/files/sudoer_ansible
+       dest: /etc/sudoers.d/ansible
+       owner: root
+       group: root
+       mode: 0440
