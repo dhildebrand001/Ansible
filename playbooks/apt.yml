@@ -1,0 +1,23 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: apt
+      apt:
+        update_cache: 'yes'
+        upgrade: 'full'
+        autoremove: 'yes'
+
+    - name: install if-tools
+      apt:
+         name: net-tools
+         state: latest
+
+    - name: iperf
+      apt:
+        name: iperf
+        state: latest
+
+    - name: qemu-guest-agent
+      apt:
+        name: qemu-guest-agent
+        state: latest
