@@ -13,6 +13,7 @@ ansible_ssh_pass=D06o17n73
 [workers]
 
 [simone]
+Mint ansible_host=10.0.0.156
 
 #Heimdall ansible_host=10.0.0.253
 
@@ -21,7 +22,7 @@ ansible_ssh_pass=D06o17n73
 Guacamole ansible_host=10.0.0.80
 Plex-24 ansible_host=10.0.0.220
 Machinist-24 ansible_host=10.0.0.5
-Mint ansible_host=10.0.0.156
+
 
 
 [root:vars]
