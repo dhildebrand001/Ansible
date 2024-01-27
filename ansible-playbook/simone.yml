@@ -1,6 +1,6 @@
 - hosts: all
   become: true
-  become_user: root
+  become_user: don
   tasks:
 
 #  - name: update repository index
@@ -12,7 +12,7 @@
     user: 
       name: simone
       groups: root
-      
+
   -  name: add sudoers file for simone
      copy:
        src: ~/ansible/files/sudoer_simone
