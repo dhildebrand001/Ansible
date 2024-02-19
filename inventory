@@ -39,10 +39,10 @@ ansible_ssh_pass=d06o17n73
 [simone:vars]
 ansible_ssh_user=simone
 
-[don:vars]
-ansible_ssh_user=don
-ansible_ssh_pass=don
-ansible_become_pass=don
+#[don:vars]
+#ansible_ssh_user=don
+#ansible_ssh_pass=don
+#ansible_become_pass=don
 
 #[master,workers:vars]
 #ansible_ssh_user=root
